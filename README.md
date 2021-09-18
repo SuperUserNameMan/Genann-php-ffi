@@ -1,2 +1,2 @@
-# Genann-php-ffi
-Genann binding to PHP8 using FFI
+# [Genann](https://github.com/codeplea/genann)-php-ffi
+[Genann](https://github.com/codeplea/genann) binding to PHP8 using FFI
