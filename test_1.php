@@ -33,12 +33,12 @@ foreach( [ 0 , 1 , 1 , 0 ] as $_x => $_val )
 $ann = Genann::init(2, 1, 2, 1);
 
 /* Train on the four labeled data points many times. */
-for( $i = 0 ; $i < 5000 ; $i++ ) 
+for( $i = 0 ; $i < 666 ; $i++ ) 
 {
-	Genann::train( $ann , $input[0] , $output + 0 , 3 );
-	Genann::train( $ann , $input[1] , $output + 1 , 3 );
-	Genann::train( $ann , $input[2] , $output + 2 , 3 );
-	Genann::train( $ann , $input[3] , $output + 3 , 3 );
+	Genann::train( $ann , $input[0] , FFI::addr( $output[0] ) , 3 );
+	Genann::train( $ann , $input[1] , FFI::addr( $output[1] ) , 3 );
+	Genann::train( $ann , $input[2] , FFI::addr( $output[2] ) , 3 );
+	Genann::train( $ann , $input[3] , FFI::addr( $output[3] ) , 3 );
 }
 
 /* Run the network and see what it predicts. */
